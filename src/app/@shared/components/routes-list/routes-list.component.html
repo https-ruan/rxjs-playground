@@ -1,0 +1,7 @@
+<div>
+  <ng-container *ngFor="let route of routes">
+    <a *ngIf="route.path && route.path !== '**'" [routerLink]="route.path">{{
+      route.path | titlecase
+    }}</a>
+  </ng-container>
+</div>
