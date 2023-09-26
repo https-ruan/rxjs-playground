@@ -8,6 +8,10 @@ import { ajax } from 'rxjs/ajax';
       Ele cria um observável para uma solicitação Ajax com um objeto de
       solicitação com url, cabeçalhos, etc ou uma cadeira de caracteres para uma
       URL.
+      <br />
+      <br />
+      Ref:
+      <a href="hhttps://rxjs.dev/api/ajax/ajax" target="_blank">clique aqui</a>
     </p>
 
     <br />
