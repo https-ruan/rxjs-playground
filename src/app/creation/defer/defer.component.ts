@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, defer, of } from 'rxjs';
+import { defer, of } from 'rxjs';
 
 @Component({
   selector: 'defer',
