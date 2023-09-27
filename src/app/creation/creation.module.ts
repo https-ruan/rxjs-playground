@@ -8,6 +8,7 @@ import { DeferComponent } from './defer/defer.component';
 import { FromComponent } from './from/from.component';
 import { FromEventComponent } from './from-event/from-event.component';
 import { IntervalComponent } from './interval/interval.component';
+import { OfComponent } from './of/of.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,11 @@ import { IntervalComponent } from './interval/interval.component';
     FromComponent,
     FromEventComponent,
     IntervalComponent,
+    OfComponent,
   ],
   imports: [SharedModule, CreationRoutingModule],
+  exports: [
+    OfComponent
+  ],
 })
 export class CreationModule {}
