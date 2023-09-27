@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { take } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
 
 @Component({
@@ -25,6 +26,6 @@ export class AjaxComponent implements OnInit {
   obs$ = ajax({ url: 'https://api.github.com/users?per_page=5' });
 
   ngOnInit(): void {
-    this.obs$.subscribe(console.log);
+    this.obs$.pipe(take(1)).subscribe(console.log);
   }
 }

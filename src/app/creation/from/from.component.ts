@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
+import { from, take } from 'rxjs';
 
 @Component({
   selector: 'from',
@@ -26,6 +26,6 @@ export class FromComponent implements OnInit {
   obs$ = from([1, 2, 3]);
 
   ngOnInit(): void {
-    this.obs$.subscribe(console.log);
+    this.obs$.pipe(take(1)).subscribe(console.log);
   }
 }

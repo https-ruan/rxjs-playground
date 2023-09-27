@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fromEvent } from 'rxjs';
+import { fromEvent, take } from 'rxjs';
 
 @Component({
   selector: 'from-event',
@@ -26,6 +26,6 @@ export class FromEventComponent implements OnInit {
   obs$ = fromEvent(document, 'click');
 
   ngOnInit(): void {
-    this.obs$.subscribe(console.log);
+    this.obs$.pipe(take(1)).subscribe(console.log);
   }
 }

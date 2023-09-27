@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { defer, of } from 'rxjs';
+import { defer, of, take } from 'rxjs';
 
 @Component({
   selector: 'defer',
@@ -26,6 +26,6 @@ export class DeferComponent implements OnInit {
   obs$ = defer(() => of('a', 'b', 'c'));
 
   ngOnInit(): void {
-    this.obs$.subscribe(console.log);
+    this.obs$.pipe(take(1)).subscribe(console.log);
   }
 }
